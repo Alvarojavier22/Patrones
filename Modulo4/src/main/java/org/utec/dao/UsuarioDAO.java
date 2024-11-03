@@ -29,7 +29,7 @@ public class UsuarioDAO {
     }
 
 
-    public List<Usuario> obtenerUsuarios(Usuario usuario) throws SQLException {
+    public List<Usuario> obtenerUsuarios() throws SQLException {
         List<Usuario> usuarios = new ArrayList<>();
         try (Statement stmt = conexion.createStatement()) {
             ResultSet rs = stmt.executeQuery(OBTENER_USUARIOS);
@@ -74,4 +74,6 @@ public class UsuarioDAO {
             System.out.println("Conexion cerrada");
         }
     }
+
+
 }
